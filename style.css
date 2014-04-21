@@ -13,3 +13,9 @@ div#sub {
   width: 260px;
   float: left;
 }
+
+footer:before {
+  content: "";
+  display: table;
+  clear: both;
+}
