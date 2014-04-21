@@ -3,14 +3,10 @@ div#wrap {
   margin: 0 auto;
 }
 
-div#main {
-  width: 670px;
-  float: left;
-  margin-right: 30px;
-}
-
 header h1 {
-  float: left;
+  font-size: 200%;
+  text-align: center;
+  margin-top: 30px;
 }
 
 header nav {
@@ -26,6 +22,19 @@ header nav li {
 
 div#about {
   clear: both;
+}
+
+div#main {
+  width: 670px;
+  float: left;
+  margin-right: 30px;
+}
+
+div#main h2 {
+  font-size: 125%;
+  border-left: 5px red solid;
+  padding-left: 10px;
+  margin-bottom: 15px;
 }
 
 div#sub {
