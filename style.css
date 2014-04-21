@@ -1,1 +1,15 @@
-/* ここにcssを書いてみましょう */
+div#wrap {
+  width: 960px;
+  margin: 0 auto;
+}
+
+div#main {
+  width: 670px;
+  float: left;
+  margin-right: 30px;
+}
+
+div#sub {
+  width: 260px;
+  float: left;
+}
