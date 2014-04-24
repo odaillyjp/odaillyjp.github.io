@@ -1,60 +1,361 @@
-div#wrap {
-  width: 960px;
-  margin: 0 auto;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-header h1 {
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Original CSS */
+
+body {
+  font: 13px arial, helvetica, clean, sans-serif;
+  background: #696969;
+}
+
+h1 {
+  font-weight: bold;
   font-size: 200%;
-  text-align: center;
-  margin-top: 30px;
 }
 
-header nav {
-  float: right;
-  margin-top: 30px;
+h2 {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+h3 {
+  font-weight: bold;
   font-size: 125%;
 }
 
-header nav li {
-  display: inline;
-  margin-left: 30px;
+#wrap {
+  width: 960px;
+  margin: 20px auto;
+  background: #FFFFFF;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px;
 }
 
-div#about {
+#header h1 {
+  text-align: center;
+  padding: 30px 0px;
+}
+
+#header nav {
+  text-align: center;
+}
+
+#header nav li {
+  display: inline;
+  padding: 0 10px
+}
+
+#header nav#global ul {
+  border: #cccccc solid 1px;
+}
+
+#header nav#global ul li a {
+  padding: 0 20px;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 100%;
+  font-weight: bold;
+  border-left: #cccccc solid 1px;
+  border-right: #cccccc solid 1px;
+  color: #444444;
+}
+
+#about {
   clear: both;
 }
 
-div#main {
-  width: 670px;
+#about li {
+  display: inline;
   float: left;
-  margin-right: 30px;
+  width: 280px;
+  padding: 10px;
+  border: #999999 solid 1px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px;
+  margin: 5px;
 }
 
-div#main h2 {
+#about li h2 {
+  padding: 2px;
+  border-bottom: #cccccc solid 1px;
+}
+
+#about li p {
+  margin: 4px;
+}
+
+#body {
+  clear: both;
+  padding: 10px 10px 0 10px;
+  overflow: hidden;
+}
+
+#main {
+  width: 740px;
+  float: left;
+}
+
+#main .breadcrumbs {
+  margin: 0 0 10px 0;
+}
+
+#main .breadcrumbs li {
+  display: inline;
+}
+
+#main .breadcrumbs li a {
+  text-decoration: none;
+}
+
+#main .breadcrumbs li a:after {
+  content: " > ";
+}
+
+#sub {
+  width: 190px;
+  float: left;
+}
+
+#sub .ad {
+  background: #999999;
+  height: 200px;
+  margin: 0 0 10px 0;
+}
+
+#sub nav#local ul {
+  border-bottom: #dddddd solid 1px;
+  margin-bottom: 10px;
+}
+
+#sub nav#local ul li a {
+  display: block;
+  background: #e9e9e9;
+  line-height: 20px;
+  padding: 10px 5px 5px 5px;
+  border: #dddddd solid 1px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 1px inset;
+  -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 1px 1px inset;
+  text-align: right;
+  text-decoration: none;
+}
+
+#articles {
+  width: 530px;
+  float: right;
+  padding: 0 10px;
+}
+
+#articles article {
+  border: #999999 solid 1px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px;
+}
+
+#articles article header {
+  padding-bottom: 2px;
+  border-bottom: #dddddd solid 1px;
+}
+
+#articles article header h3 {
+  font-size: 150%;
+}
+
+#articles article header .date {
+  font-size: 90%;
+  color: #444444;
+}
+
+#articles article .body {
+  margin: 20px 0;
+}
+
+#articles article .body h4 {
+  font-weight: bold;
+  font-size: 150%;
+  margin: 25px 0;
+  padding-bottom: 10px;
+  border-bottom: black dotted 1px;
+}
+
+#articles article .body h5 {
+  font-weight: bold;
   font-size: 125%;
-  border-left: 5px red solid;
-  padding-left: 10px;
-  margin-bottom: 15px;
+  margin: 20px 0;
 }
 
-div#sub {
-  width: 260px;
-  float: left;
+#articles article .body h6 {
+  font-weight: bold;
+  font-size: 110%;
+  margin: 20px 0;
 }
 
-div#articles {
-  width: 460px;
+#articles article .body h6:before {
+  content: "■";
+  margin: 0 5px 0 0;
+}
+
+#articles article .body strong {
+  font-weight: bold;
+}
+
+#articles article .body blockquote {
+  margin: 20px;
+  padding: 10px;
+  border: #dddddd solid 1px;
+}
+
+#articles article .body ul {
+  list-style: square;
+  margin: 0 0 2em 2em;
+}
+
+#articles article .body ol {
+  list-style: decimal;
+  margin: 0 0 2em 2em;
+}
+
+#articles article .body li {
+  line-height: 1;
+  margin: 1em 0 1em 0;
+}
+
+#articles article .body table {
+  margin: 20px;
+}
+
+#articles article .body table th,
+#articles article .body table td {
+  padding: 8px 12px;
+  border: #dddddd solid 1px;
+}
+
+#articles article .body table th {
+  background: #eeeeee;
+  text-align: center;
+  font-weight: bold;
+}
+
+#articles article footer {
+  padding: 20px 0 0 0;
+}
+
+#articles article footer dl {
+  font-size: 90%;
+  text-align: right;
+  color: #444444;
+}
+
+#comments {
+  width: 190px;
   float: right;
-  margin-left: 30px;
+  padding: 10px 0;
 }
 
-aside#comments {
-  width: 180px;
-  float: right;
+#comments ul li {
+  display: block;
+  padding: 10px 0;
+  border-bottom: #dddddd dotted 1px;
 }
 
-footer:before {
+#comments dl {
+  font-size: 90%;
+  text-align: right;
+  color: #444444;
+  margin-top: 5px;
+}
+
+#footer:before {
   content: "";
   display: table;
   clear: both;
+}
+
+#footer {
+  padding: 20px 0;
+  background: #eeeeee;
+  -webkit-box-shadow: black 0 1px 2px inset;
+  -moz-box-shadow: black 0 1px 2px inset;
+  box-shadow: black 0 1px 2px inset;
+  border-radius: 0 0 10px 10px;
+}
+
+#footer nav {
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+footer#footer li {
+  display: inline;
+}
+
+footer#footer .copyright {
+  text-align: center;
 }
